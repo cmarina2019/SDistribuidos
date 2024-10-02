@@ -237,3 +237,155 @@ Diagrama de flujo:
 ### Programas.
 
 **1. Implementa una función para inicializar las posiciones del array**
+
+Código:
+
+```go
+package main
+
+import "fmt"
+
+// Función para inicializar el array con valores
+func inicArray(a *[5]int) {
+	for i := 0; i < len(a); i++ {
+		a[i] = i * 10 // se asigna un valor
+	}
+}
+
+func main() {
+
+	var a [5]int //declarar un array de tamaño 5
+	fmt.Println("Antes de inicializar: ", a)
+
+	inicArray(&a) // inicializar el array
+	fmt.Println("Despues de inicializar: ", a)
+}
+```
+
+Pseudocódigo:
+
+INICIO
+
+    // Definir una función para inicializar el array
+    FUNCIÓN inicArray(a como referencia a un array de 5 enteros)
+        PARA i desde 0 hasta tamaño del array - 1
+            a[i] = i * 10 // Asignar valor al elemento del array
+        FIN PARA
+    FIN FUNCIÓN
+
+    // Función principal
+    INICIO
+        DECLARAR a como un array de tamaño 5 de enteros
+        IMPRIMIR "Antes de inicializar: " y el array a
+        
+        LLAMAR a la función inicArray pasando la referencia del array a
+        IMPRIMIR "Después de inicializar: " y el array a
+    FIN
+
+FIN
+
+1. Declarar una función inicArray:
+
+    Esta función recibe una referencia a un array de 5 enteros.
+    Itera sobre cada índice del array desde 0 hasta 4.
+    En cada iteración, asigna el valor de i * 10 al elemento en el índice i del array.
+
+2. En la función principal (main):
+
+    Declarar un array a de tamaño 5 con elementos enteros, inicialmente todos son ceros.
+    Imprimir el estado del array a antes de ser inicializado con la función inicArray.
+
+3. Llamar a la función inicArray:
+
+    Pasar el array a por referencia a la función inicArray.
+    La función inicializa los valores del array.
+
+4. Imprimir el array:
+
+    Después de llamar a inicArray, imprimir nuevamente el array a para mostrar los valores actualizados.
+
+Diagrama de flujo:
+
+**2. Implementa una función para imprimir las posiciones del array**
+
+Código:
+
+```go
+
+package main
+
+import "fmt"
+
+// Función para inicializar el array con valores
+func inicArray(a *[5]int) {
+	for i := 0; i < len(a); i++ {
+		a[i] = i * 10 // se asigna un valor
+	}
+}
+
+func main() {
+
+	var a [5]int //declarar un array de tamaño 5
+	fmt.Println("Antes de inicializar: ", a)
+
+	inicArray(&a) // inicializar el array
+	fmt.Println("Despues de inicializar: ", a)
+
+	fmt.Println("Posiciones y valores del array")
+	for i := 0; i < len(a); i++{
+		fmt.Printf("Posicion %d: %d\n", i, a[i])
+	}
+
+}
+
+```
+
+Pseudocódigo:
+
+INICIO
+
+    // Definir una función para inicializar el array
+    FUNCIÓN inicArray(a como referencia a un array de 5 enteros)
+        PARA i desde 0 hasta tamaño del array - 1
+            a[i] = i * 10 // Asignar valor al elemento del array
+        FIN PARA
+    FIN FUNCIÓN
+
+    // Función principal
+    INICIO
+        DECLARAR a como un array de tamaño 5 de enteros
+        IMPRIMIR "Antes de inicializar: " y el array a
+        
+        LLAMAR a la función inicArray pasando la referencia del array a
+        IMPRIMIR "Después de inicializar: " y el array a
+        
+        // Imprimir posiciones y valores del array
+        IMPRIMIR "Posiciones y valores del array:"
+        PARA i desde 0 hasta tamaño del array - 1
+            IMPRIMIR "Posición i: " y a[i]
+        FIN PARA
+    FIN
+
+FIN
+
+1. Definimos la función inicArray:
+
+    Iterar sobre cada posición del array (de 0 a 4).
+    Asignar el valor i * 10 a cada posición.
+
+2. En la función principal:
+
+    Declaramos un array a de tamaño 5.
+    Imprimimos el array antes de inicializarlo.
+
+3. Llamaremos a inicArray:
+
+    Pasar el array por referencia para que la función lo inicialice.
+
+4. Imprimimos el array:
+
+    Imprimimos el array después de inicializarlo.
+
+5. Imprimimos posiciones y valores:
+
+    Recorreremos el array y para cada posición, imprimir el índice y su valor correspondiente.
