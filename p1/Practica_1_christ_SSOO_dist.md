@@ -8,6 +8,8 @@
 
 ### Códigos 
 
+***
+
 1. Describir el siguiente código en un diagrama de UML y pseudocódigo.
 
 ```go
@@ -44,6 +46,8 @@ func main() {
 **Diagrama de flujo:**
 
 ![Imagen1](Practica1SD-Página-2.drawio.png)
+
+***
 
 **2. Describir el siguiente código en un diagrama UML y un pseudocódigo**
 
@@ -119,6 +123,8 @@ Diagrama de flujo:
 
 ![Imagen2](Practica1SD-Página-1.drawio.png)
 
+***
+
 **3. Describir el siguiente código en un diagrama UML y un pseudocódigo**
 
 ```go
@@ -188,6 +194,7 @@ Diagrama de flujo:
 
 
 
+***
 
 **4. Describir el siguiente código en un diagrama UML y un pseudocódigo**
 
@@ -233,8 +240,11 @@ Pseudocodigo:
 
 Diagrama de flujo:
 
+*** 
 
 ### Programas.
+
+***
 
 **1. Implementa una función para inicializar las posiciones del array**
 
@@ -304,7 +314,11 @@ FIN
 
     Después de llamar a inicArray, imprimir nuevamente el array a para mostrar los valores actualizados.
 
-Diagrama de flujo:
+Diagrama de clases:
+
+![imagen 2.1](codigo1.drawio.png)
+
+***
 
 **2. Implementa una función para imprimir las posiciones del array**
 
@@ -389,3 +403,338 @@ FIN
 5. Imprimimos posiciones y valores:
 
     Recorreremos el array y para cada posición, imprimir el índice y su valor correspondiente.
+
+Diagrama de clases:
+
+![imagen 2.2](codigo2.drawio.png)
+
+***
+
+**3. Implementa una función que devuelva la media**
+
+Código:
+
+```go
+package main
+
+import "fmt"
+
+func media(numeros []float64) float64{
+	suma := 0.0
+	for _, num:= range numeros {
+		suma += num
+	}
+	return suma / float64(len(numeros))
+}
+
+func main(){
+	numeros := []float64{2,3,4,5,6}
+	fmt.Println(media(numeros))
+}
+```
+
+Pseudocódigo:
+
+INICIO
+
+	1. Definir la función media(numeros)
+
+		Entrada: lista de numeros decimales.
+
+		Se inicializa suma a 0.
+
+		Para cada num en numeros, sumamos num a suma.
+
+		Retornamos el valor de suma dividido por el tamaño de numeros.
+	
+	2. Iniciamos el programa principal
+
+		Definimos numeros como una lista de numeros, rellenamos con numeros el array.
+
+		Llamamos a la función media(numeros) y nos mostrará el resultado.
+
+FIN
+
+Diagrama de clases:
+
+![imagen 2.3](codigo3.drawio.png)
+
+***
+
+**4. Implementa una función que devuelva el valor máximo**
+
+Código:
+
+```go
+package main
+
+import "fmt"
+
+func max(numeros []int) int {
+	max := numeros[0]
+	for _, num := range numeros {
+		if num > max {
+			max = num
+		}
+	}
+	return max
+}
+
+func main() {
+	numeros := []int{10, 20, 5, 30, 15}
+	fmt.Println(max(numeros))
+}
+```
+
+Pseudocodigo:
+
+INICIO
+	1. Definimos la funcion max(numeros)
+
+		Entrada: Una lista de numeros enteros
+
+		Asignamos max como el primer elemento de numeros
+
+		Para cada num en numeros, si num es mayor que max, se le asigna num a max.
+
+		Retornamos max.
+
+	2. Iniciamos el programa principal
+
+		Definimos una lista de numeros que son los que vamos a ver cual es el mayor
+
+		Llamamos a nuestra función max(numeros) y nos mostrará el resultado
+
+Diagrama:
+
+![imagen 2.4](codigo4.drawio(1).png)
+
+***
+
+**5. Implementa una función que devuelva el valor mínimo**
+
+Código:
+
+```go
+package main
+
+import "fmt"
+
+func min(numeros []int) int {
+	min := numeros[0]
+	for _, num := range numeros {
+		if num < min {
+			min = num
+		}
+	}
+	return min
+}
+
+func main() {
+	numeros := []int{10, 20, 5, 30, 15, 2}
+	fmt.Println(min(numeros))
+}
+```
+
+Pseudocodigo:
+
+INICIO
+	1. Definimos la funcion min(numeros).
+
+		Entrada: Una lista de numeros enteros.
+
+		Asignamos min como el primer elemento de numeros.
+
+		Para cada num en numeros, si num es menor que min, se le asigna num a min.
+
+		Retornamos min.
+
+	2. Iniciamos el programa principal.
+
+		Definimos una lista de numeros que son los que vamos a ver cual es el menor.
+
+		Llamamos a nuestra función min(numeros) y nos mostrará el resultado.
+
+Diagrama de clases:
+
+![imagen 2.5](codigo5.drawio.png)
+
+***
+
+**6. Implementa una función que dado un valor, devuelva la posición del array**
+
+Código:
+
+```go
+
+package main
+
+import "fmt"
+
+func posicion(numeros []int, valor int) int {
+	for i, num := range numeros {
+		if num == valor {
+			return i
+		}
+	}
+	return -1
+}
+
+func main() {
+
+	numeros := []int{10, 20, 5, 30, 15}
+	valor := 3
+	fmt.Println("El valor se encuentra en la posicion: ",posicion(numeros, valor))
+}
+```
+
+Pseudocódigo:
+
+INICIO
+
+	1. Definimos la función posicion(numeros, valor)
+
+		Entrada: una lista de numeros enteros, y valor que es un entero a buscar.
+
+		Para cada num en numeros, con un indice i, si num es igual a valor, retornamos i.
+
+		Retornamos -1 cuando el valor no se encuentra.
+
+	2. Iniciamos el programa principal.
+
+		Definimos una lista de numeros, 10, 20, 5, 30, 15.
+
+		Definimos a valor como 3.
+
+		Por último llamamos a la funcion posicion y mostrará el resultado.
+
+FIN
+
+Diagrama de clases:
+
+![imagen 2.6](codigo6.drawio.png)
+
+***
+
+**7. Escribe un programa en el que te declares un array y desde el invoques a las anteriores funciones a modo de menú.**
+
+```go
+
+package main
+
+import "fmt"
+
+// Función para inicializar el array con valores
+func inicArray(a *[5]int) {
+	for i := 0; i < len(a); i++ {
+		a[i] = i * 10 // Se asigna un valor
+	}
+}
+
+// Función para calcular la media
+func media(numeros [5]float64) float64 {
+	suma := 0.0
+	for _, num := range numeros {
+		suma += num
+	}
+	return suma / float64(len(numeros))
+}
+
+// Función para encontrar el valor máximo
+func max(numeros [5]int) int {
+	max := numeros[0]
+	for _, num := range numeros {
+		if num > max {
+			max = num
+		}
+	}
+	return max
+}
+
+// Función para encontrar el valor mínimo
+func min(numeros [5]int) int {
+	min := numeros[0]
+	for _, num := range numeros {
+		if num < min {
+			min = num
+		}
+	}
+	return min
+}
+
+// Función para encontrar la posición de un valor en el array
+func posicion(numeros [5]int, valor int) int {
+	for i, num := range numeros {
+		if num == valor {
+			return i
+		}
+	}
+	return -1
+}
+
+func main() {
+	var a [5]int // Declarar array de tamaño 5
+	inicArray(&a) // Inicializar el array
+	fmt.Println("Array inicializado:", a)
+
+	for {
+		fmt.Println("\n--- Menú ---")
+		fmt.Println("1. Calcular media de números")
+		fmt.Println("2. Encontrar valor máximo")
+		fmt.Println("3. Encontrar valor mínimo")
+		fmt.Println("4. Buscar posición de un valor")
+		fmt.Println("5. Salir")
+		fmt.Print("Elige una opción: ")
+
+		var opcion int
+		fmt.Scanln(&opcion)
+
+		switch opcion {
+		case 1:
+			numeros := [5]float64{2, 3, 4, 5, 6} // Puedes modificar estos números
+			fmt.Println("La media es:", media(numeros))
+
+		case 2:
+			fmt.Println("El valor máximo es:", max(a))
+
+		case 3:
+			fmt.Println("El valor mínimo es:", min(a))
+
+		case 4:
+			var valor int
+			fmt.Print("Ingresa el valor a buscar: ")
+			fmt.Scanln(&valor)
+			pos := posicion(a, valor)
+			if pos != -1 {
+				fmt.Printf("El valor %d se encuentra en la posición: %d\n", valor, pos)
+			} else {
+				fmt.Printf("El valor %d no se encontró en el array\n", valor)
+			}
+
+		case 5:
+			fmt.Println("Saliendo del programa...")
+			return
+
+		default:
+			fmt.Println("Opción no válida. Intenta de nuevo.")
+		}
+	}
+}
+
+```
+
+Pseudocodigo:
+
+1. Inicialización de Array: Se define una función para inicializar un array de enteros asignando valores a cada posición.
+
+2. Cálculo de Media: Se define una función para calcular la media de un array de números decimales.
+
+3. Valor Máximo y Mínimo: Se definen funciones para encontrar el valor máximo y mínimo en un array de enteros.
+
+4. Buscar Posición: Se define una función que devuelve la posición de un valor dado en un array.
+
+5. Menú Interactivo: En la función principal, se inicializa un array y se presenta un menú interactivo al usuario, permitiéndole seleccionar diferentes opciones para calcular la media, encontrar valores máximo y mínimo, o buscar la posición de un valor en el array.
+
+Diagrama de clases:
+
+![imagen 2.7](codigo7.drawio.png)
