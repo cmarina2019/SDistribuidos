@@ -188,9 +188,17 @@ Main:
 3. Se crea una lista que se llama nums y en esta lista contiene los números de 1,2,3,4 y luego se le pasa como un argumento a la función sum.
 	 
 
-Diagrama de flujo:
+Diagrama de clases:
 
+![Imagen3](dibujo3.drawio.png)
 
+Explicación:
+
+    La clase Main tiene dos métodos:
+
+        sum(nums: int[]): acepta un número variable de enteros (representados como un array de enteros en el diagrama).
+
+        main(): ejecuta la lógica principal llamando a la función sum con diferentes conjuntos de números.
 
 
 
@@ -238,7 +246,15 @@ Pseudocodigo:
 13. Fin del programa.
 
 
-Diagrama de flujo:
+Diagrama de clases:
+
+![Imagen4](dibujo4.drawio.png)
+
+Explicación:
+
+    La clase Main contiene tres atributos, que son los arrays (a, b, twoD).
+	
+    La única función es main(), donde se ejecuta la lógica del programa.
 
 *** 
 
