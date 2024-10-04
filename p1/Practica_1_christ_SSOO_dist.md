@@ -79,7 +79,7 @@ fmt.Printf(“Your grade is %s\n”, grade)
 }
 ```
 
-Pseudocodigo:
+Pseudocódigo:
 
 
 INICIO
@@ -146,7 +146,7 @@ func main() {
 }
 ```
 
-Pseudocodigo:
+Pseudocódigo:
 
 INICIO
 
@@ -177,7 +177,7 @@ sum:
 
 1. Se imprime la lista de los números recibidos
 2. Inicializamos la variable total a 0
-3. Podemos ver que para cada numero en la lista, se va sumando el total
+3. Podemos ver que para cada número en la lista, se va sumando el total
 4.  Al final, se imprime el valor de total.
 
 
