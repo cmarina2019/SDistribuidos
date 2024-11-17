@@ -96,3 +96,27 @@ func TestMultiplicarPistas(t *testing.T) {
 	fmt.Printf("\nDuración con el número original de pistas (%d): %v\n", originalNumPistas, duracionOriginal)
 	fmt.Printf("Duración con el número de pistas multiplicado por 5 (%d): %v\n", numPistasMultiplicadas, duracionMultiplicada)
 }
+
+func TestMultiplicarPistasConMayorTiempo(t *testing.T) {
+	// Valores originales
+	originalNumPistas := numPistas
+	numPistasMultiplicadas := originalNumPistas * 5
+	originalTiempoBasePista := tiempoBasePista
+	tiempoBasePistaMultiplicado := originalTiempoBasePista * 5
+
+	// Simulación con el número original de pistas y tiempo base de pista
+	fmt.Println("\nEjecutando simulación con el número original de pistas y tiempo base de pista...")
+	start := time.Now()
+	ejecutarSimulacion(numAviones, numPistas, numPuertas, maxEsperaTorre, maxEsperaPista, tiempoBaseTorre, tiempoBasePista, tiempoBasePuerta, variacion)
+	duracionOriginal := time.Since(start)
+
+	// Simulación con pistas multiplicadas y tiempo base de pista incrementado
+	fmt.Println("\nEjecutando simulación con pistas multiplicadas por 5 y tiempo base de pista multiplicado por 5...")
+	start = time.Now()
+	ejecutarSimulacion(numAviones, numPistasMultiplicadas, numPuertas, maxEsperaTorre, maxEsperaPista, tiempoBaseTorre, tiempoBasePistaMultiplicado, tiempoBasePuerta, variacion)
+	duracionModificada := time.Since(start)
+
+	// Imprimir y comparar los resultados
+	fmt.Printf("\nDuración con el número original de pistas (%d) y tiempo base de pista (%d): %v\n", originalNumPistas, originalTiempoBasePista, duracionOriginal)
+	fmt.Printf("Duración con pistas multiplicadas (%d) y tiempo base de pista multiplicado (%d): %v\n", numPistasMultiplicadas, tiempoBasePistaMultiplicado, duracionModificada)
+}
